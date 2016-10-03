@@ -70,6 +70,7 @@ public class STGame {
 
                 }
 
+
                 gameIsOn = false;
 
 
