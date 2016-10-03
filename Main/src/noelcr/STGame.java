@@ -1,7 +1,9 @@
 package noelcr;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class STGame {
     private static final int NUM_CARDS_DEALT = 8;
@@ -19,7 +21,7 @@ public class STGame {
 
     public void selectDealer() {
         //todo: google how to get random int
-        int i = new Random().nextInt(2);
+        //int dealerNum = new Random().nextInt(2);
         dealerNum = 1;
     }
 
@@ -52,21 +54,23 @@ public class STGame {
         while (gameIsOn){
 
 
-
-
-
             //todo: set up players in correct order(loop?)
             //showPlayerTurn();
 
 
             for (int i = 0; i < players.length; i++) {
-                //whoever is zero starts -
                 System.out.println(players[i]);
+
+                if (players[i] == players[yourPlayerId]){
+                    System.out.println("It is your turn, please select a card number, 1>8 ->");
+                    Scanner opt = new Scanner(System.in);
+                    int cardChoice = opt.nextInt();
+                    System.out.println(cardChoice);
+                    System.out.println("your turn is over");
+
+                }
+
                 gameIsOn = false;
-
-
-
-
 
 
 
