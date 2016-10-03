@@ -59,7 +59,7 @@ public class STGame {
 
 
             for (int i = 0; i < players.length; i++) {
-                System.out.println(players[i]);
+
 
                 if (players[i] == players[yourPlayerId]){
                     System.out.println("It is your turn, please select a card number, 1>8 ->");
@@ -69,6 +69,10 @@ public class STGame {
                     System.out.println("your turn is over");
 
                 }
+                //System.out.println(players[i]);
+
+
+                //add compare card - using players[i]
 
 
                 gameIsOn = false;

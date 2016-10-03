@@ -6,9 +6,11 @@ import java.util.Random;
 public class Deck {
     private static final int NUM_CARDS_INIT = 60;
     private ArrayList<Card> cards;
+    ///////////////////////
 
 
     //todo: import list of all cards
+
 
 
     public Deck(){
