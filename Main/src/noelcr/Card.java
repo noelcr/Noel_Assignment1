@@ -11,6 +11,6 @@ public class Card {
     }
 
     public String toString() {
-        return "id=" + id;
+        return "id=" + id + "\n ";
     }
 }

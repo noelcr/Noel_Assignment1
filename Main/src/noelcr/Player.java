@@ -2,9 +2,7 @@ package noelcr;
 
 import java.util.ArrayList;
 
-/**
- * Created by Noel on 26/09/2016.
- */
+
 public class Player {
     private ArrayList<Card> cards;
     private String playerID;
@@ -18,6 +16,7 @@ public class Player {
     }
 
     public String toString(){
-        return "PlayerID" + playerID;
+        return "PlayerID=" + playerID + "\n cards=" + cards;
+
     }
 }

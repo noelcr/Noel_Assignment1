@@ -11,24 +11,36 @@ public class mainA1 {
         displayWelcome();
         displayMenu();
         int userChoice = getUserChoice();
-
+        STGame game;
         if(userChoice == N_GAME){
-            startNewGame();
+            game = startNewGame();
+            game.playGame();
         }
 
     }
 
-    private static void startNewGame() {
+    private static STGame startNewGame() {
         int numPlayers = getNumPlayers();
         STGame game = new STGame(numPlayers);
         game.selectDealer();
         game.dealRandomCardsToEachPlayer();
 
+        game.selectYouAsPlayer();
+
+        Player humanPlayer = game.getHumanPlayer();
+        //game.showHumanPlayerCards();
+        showPlayer(humanPlayer);
+
+        return game;
+    }
+
+    private static void showPlayer(Player humanPlayer) {
+        System.out.println("human Player= " + humanPlayer);
     }
 
     private static int getNumPlayers() {
         //todo: get number of players from user
-        return 1;
+        return 3;
     }
 
     private static int getUserChoice() {
