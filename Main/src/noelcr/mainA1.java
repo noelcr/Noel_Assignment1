@@ -1,5 +1,7 @@
 package noelcr;
 
+import java.util.Scanner;
+
 /**
  * Created by Noel on 26/09/2016.
  */
@@ -7,7 +9,7 @@ public class mainA1 {
     private static final int N_GAME = 1;
 
     public static void main(String[] args) {
-        System.out.println("Hello player");
+        //System.out.println("Hello player");
         displayWelcome();
         displayMenu();
         int userChoice = getUserChoice();
@@ -39,18 +41,23 @@ public class mainA1 {
     }
 
     private static int getNumPlayers() {
-        //todo: get number of players from user
-        return 3;
+        System.out.println("please choose how many players (3-5): ");
+        Scanner opt = new Scanner(System.in);
+        int userChoiceOfNumPlayers = opt.nextInt();
+        return userChoiceOfNumPlayers;
     }
 
     private static int getUserChoice() {
-        //todo: get value from user for menu
-        return 1;
+        Scanner opt = new Scanner(System.in);
+        int userMenuChoice = opt.nextInt();
+        return userMenuChoice;
+
     }
 
     private static void displayMenu() {
         System.out.println("1. Start the game.");
         System.out.println("2. Exit.");
+        System.out.println("> ");
     }
 
     private static void displayWelcome() {

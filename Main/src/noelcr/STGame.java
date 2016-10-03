@@ -20,7 +20,6 @@ public class STGame {
     }
 
     public void selectDealer() {
-        //todo: google how to get random int
         //int dealerNum = new Random().nextInt(2);
         dealerNum = 1;
     }
@@ -62,7 +61,7 @@ public class STGame {
 
 
                 if (players[i] == players[yourPlayerId]){
-                    System.out.println("It is your turn, please select a card number, 1>8 ->");
+                    System.out.println("It is your turn, please select a card , 1>8 ->");
                     Scanner opt = new Scanner(System.in);
                     int cardChoice = opt.nextInt();
                     System.out.println(cardChoice);
