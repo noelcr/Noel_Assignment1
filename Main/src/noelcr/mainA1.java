@@ -6,7 +6,6 @@ public class mainA1 {
     private static final int N_GAME = 1;
 
     public static void main(String[] args) {
-        //System.out.println("Hello player");
         displayWelcome();
         displayMenu();
         int userChoice = getUserChoice();
@@ -15,7 +14,6 @@ public class mainA1 {
             game = startNewGame();
             game.playGame();
         }
-
     }
 
     private static STGame startNewGame() {
@@ -23,13 +21,9 @@ public class mainA1 {
         STGame game = new STGame(numPlayers);
         game.selectDealer();
         game.dealRandomCardsToEachPlayer();
-
         game.selectYouAsPlayer();
-
         Player humanPlayer = game.getHumanPlayer();
-        //game.showHumanPlayerCards();
         showPlayer(humanPlayer);
-
         return game;
     }
 

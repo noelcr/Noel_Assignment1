@@ -26,11 +26,9 @@ public class STGame {
 
     public void dealRandomCardsToEachPlayer() {
         players = new Player[numPlayers];
-
         for (int i = 0; i < numPlayers; i++){
             players[i] = new Player("playerID " +i);
         }
-
         for (Player player : players) {
             ArrayList<Card> cards = deck.dealCards(NUM_CARDS_DEALT);
             player.setCards(cards);
@@ -39,7 +37,6 @@ public class STGame {
     }
 
     public void selectYouAsPlayer() {
-        //todo: can be random
         int yourPlayerId = 1;
     }
 
@@ -69,16 +66,8 @@ public class STGame {
 
                 }
                 //System.out.println(players[i]);
-
-
                 //add compare card - using players[i]
-
-
                 gameIsOn = false;
-
-
-
-
                 //todo: check if human player, if bot = play, if human = get input
             }
 
