@@ -2,9 +2,6 @@ package noelcr;
 
 import java.util.Scanner;
 
-/**
- * Created by Noel on 26/09/2016.
- */
 public class mainA1 {
     private static final int N_GAME = 1;
 
@@ -14,7 +11,7 @@ public class mainA1 {
         displayMenu();
         int userChoice = getUserChoice();
         STGame game;
-        if(userChoice == N_GAME){
+        if (userChoice == N_GAME) {
             game = startNewGame();
             game.playGame();
         }

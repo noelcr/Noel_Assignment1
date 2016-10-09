@@ -7,7 +7,7 @@ public class Player {
     private ArrayList<Card> cards;
     private String playerID;
 
-    public Player(String playerID){
+    public Player(String playerID) {
         this.playerID = playerID;
     }
 
@@ -15,7 +15,7 @@ public class Player {
         this.cards = cards;
     }
 
-    public String toString(){
+    public String toString() {
         return "PlayerID=" + playerID + "\n cards=" + cards;
 
     }
