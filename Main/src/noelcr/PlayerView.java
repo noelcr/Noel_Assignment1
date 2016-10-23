@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class PlayerView extends JPanel{
     Player player;
-    JLabel playerName = new JLabel("not set");
+    JLabel playerName = new JLabel("CARD LIST");
 
     public PlayerView(Player player){
         this.player = player;
