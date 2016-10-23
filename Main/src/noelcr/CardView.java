@@ -28,10 +28,11 @@ public class CardView extends JPanel {
                     cardName.setText("CANNOT BE PLAYED");
                 }
 
-                //game.playCard(cards);
+                game.playCard(cards); //check if card is eligible to play
+                System.out.println("you chose card "+cards);
                 //place card to play table
                 //remove card from player
-                cardName.setText("CLICKED");
+                cardName.setText("SELECTED");
             }
         });
     }

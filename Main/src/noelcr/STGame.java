@@ -83,5 +83,9 @@ public class STGame {
         return false;
 
     }
+
+    public void playCard(Card cards) {
+
+    }
 }
 
