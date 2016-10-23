@@ -85,6 +85,9 @@ public class STGame {
     }
 
     public void playCard(Card cards) {
+        System.out.println(cards);
+
+
 
     }
 }
