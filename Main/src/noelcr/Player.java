@@ -15,6 +15,10 @@ public class Player {
         this.cards = cards;
     }
 
+    public ArrayList<Card> getCards(){
+        return cards;
+    }
+
     public String toString() {
         return "PlayerID=" + playerID + "\n cards=" + cards;
 

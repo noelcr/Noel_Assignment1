@@ -3,9 +3,11 @@ package noelcr;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class Deck {
     private static final int NUM_CARDS_INIT = 60;
     private ArrayList<Card> cards;
+
 
 
     public Deck() {
@@ -27,4 +29,8 @@ public class Deck {
         }
         return ret;
     }
+
 }
+
+
+

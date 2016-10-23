@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class STGame {
     private static final int NUM_CARDS_DEALT = 8;
+    public static STGame currentGame;
     private int numPlayers;
     private int dealerNum;
     private Player[] players;
@@ -17,6 +18,8 @@ public class STGame {
     public STGame(int numPlayers){
         this.numPlayers = numPlayers;
         deck = new Deck();
+
+        currentGame = this;
     }
 
     public void selectDealer() {
@@ -73,6 +76,11 @@ public class STGame {
 
 
         }
+
+    }
+
+    public boolean validCardToPlay(Card cards) {
+        return false;
 
     }
 }

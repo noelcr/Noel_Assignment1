@@ -15,14 +15,11 @@ public class mainGUI extends JFrame {
     final int WIDTH = 375;
     final int HEIGHT = 225;
     private STGame game;
+    PlayerView playerView;
+
 
 //    public Integer[] playerListNum = {3,4,5};
-//    JComboBox dropMenu = new JComboBox((playerListNum));
-
-
-
-
-
+//    JComboBox dropMenu = new JComboBox((playerListNum))
 
     public mainGUI()
     {
@@ -31,8 +28,14 @@ public class mainGUI extends JFrame {
         //setLayout(new FlowLayout());
         question.setFont(bigFont);
         greeting.setFont(bigFont);
-        add(question, BorderLayout.NORTH);
-        add(answer, BorderLayout.WEST);
+
+        JPanel panell = new JPanel();
+        panell.add(question);
+        panell.add(answer);
+        add(panell, BorderLayout.NORTH);
+
+//        add(question, BorderLayout.NORTH);
+//        add(answer, BorderLayout.WEST);
         add(pressMe, BorderLayout.SOUTH);
         pressMe.setToolTipText("I do not have any info, sorry");
         add(greeting, BorderLayout.EAST);
@@ -48,8 +51,11 @@ public class mainGUI extends JFrame {
             game.selectYouAsPlayer();
             Player humanPlayer = game.getHumanPlayer();
 
-            PlayerView view = new PlayerView(humanPlayer);
-            add(view, BorderLayout.CENTER);
+            if(playerView != null){
+                remove(playerView);
+            }
+            playerView = new PlayerView(humanPlayer);
+            add(playerView, BorderLayout.CENTER);
             validate();
             repaint();
 
